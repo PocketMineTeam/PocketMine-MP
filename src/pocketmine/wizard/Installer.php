@@ -38,40 +38,7 @@ class Installer{
 	private $lang;
 
 	public function __construct(){
-		echo "[*] PocketMine-MP set-up wizard\n";
-		echo "[*] Please select a language:\n";
-		foreach(InstallerLang::$languages as $short => $native){
-			echo " $native => $short\n";
-		}
-		do{
-			echo "[?] Language (en): ";
-			$lang = strtolower($this->getInput("en"));
-			if(!isset(InstallerLang::$languages[$lang])){
-				echo "[!] Couldn't find the language\n";
-				$lang = false;
-			}
-		}while($lang == false);
-		$this->lang = new InstallerLang($lang);
-
-
-		echo "[*] " . $this->lang->language_has_been_selected . "\n";
-
-		if(!$this->showLicense()){
-			\pocketmine\kill(getmypid());
-			exit(-1);
-		}
-
-		echo "[?] " . $this->lang->skip_installer . " (y/N): ";
-		if(strtolower($this->getInput()) === "y"){
-			return;
-		}
-		echo "\n";
-		$this->welcome();
-		$this->generateBaseConfig();
-		$this->generateUserFiles();
-
-		$this->networkFunctions();
-
+		
 		$this->endWizard();
 	}
 
