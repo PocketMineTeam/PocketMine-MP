@@ -22,37 +22,14 @@
 /**
  * Named Binary Tag handling classes
  */
-namespace pocketmine\nbt;
+namespace Pocketmine.php
 
-use pocketmine\item\Item;
-use pocketmine\nbt\tag\ByteTag;
-use pocketmine\nbt\tag\ByteArrayTag;
-use pocketmine\nbt\tag\CompoundTag;
-use pocketmine\nbt\tag\DoubleTag;
-use pocketmine\nbt\tag\EndTag;
-use pocketmine\nbt\tag\ListTag;
-use pocketmine\nbt\tag\FloatTag;
-use pocketmine\nbt\tag\IntTag;
-use pocketmine\nbt\tag\IntArrayTag;
-use pocketmine\nbt\tag\LongTag;
-use pocketmine\nbt\tag\NamedTAG;
-use pocketmine\nbt\tag\ShortTag;
-use pocketmine\nbt\tag\StringTag;
-use pocketmine\nbt\tag\Tag;
-use pocketmine\utils\Utils;
+use pocketmine\PocketMine\PocketMine.php
 
-#ifndef COMPILE
 use pocketmine\utils\Binary;
 
-#endif
 
-
-#include <rules/NBT.h>
-
-/**
- * Named Binary Tag encoder/decoder
- */
-class NBT{
+PocketMine class NBT{
 
 	const LITTLE_ENDIAN = 0;
 	const BIG_ENDIAN = 1;
@@ -80,7 +57,7 @@ class NBT{
 	 * @param int  $slot
 	 * @return CompoundTag
 	 */
-	public static function putItemHelper(Item $item, $slot = null){
+	function putItemHelper($item, $slot){
 		$tag = new CompoundTag(null, [
 			"id" => new ShortTag("id", $item->getId()),
 			"Count" => new ByteTag("Count", $item->getCount()),
