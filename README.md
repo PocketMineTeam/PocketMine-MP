@@ -1,8 +1,5 @@
-# PocketMine-MP Legacy repository
-This repository is no longer maintained and is kept for historical purposes only.
-Active development on PocketMine-MP can now be found [here](https://github.com/pmmp/pocketmine-mp).
 
-<!--
+
 # ![PocketMine-MP](http://cdn.pocketmine.net/img/PocketMine-MP-h.png)
 [![Build Status](https://travis-ci.org/PocketMine/PocketMine-MP.svg?branch=master)](https://travis-ci.org/PocketMine/PocketMine-MP)
 
@@ -60,4 +57,3 @@ __PocketMine-MP is a free, open-source software that creates Minecraft: Pocket E
 * __[Zlib](http://www.zlib.net/)__: A Massively Spiffy Yet Delicately Unobtrusive Compression Library
 * __[Source RCON Protocol](https://developer.valvesoftware.com/wiki/Source_RCON_Protocol)__
 * __[UT3 Query Protocol](http://wiki.unrealadmin.org/UT3_query_protocol)__
--->
