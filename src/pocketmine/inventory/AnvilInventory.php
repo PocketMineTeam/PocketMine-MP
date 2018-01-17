@@ -24,7 +24,7 @@ namespace pocketmine\inventory;
 use pocketmine\level\Position;
 use pocketmine\Player;
 
-class AnvilInventory extends ContainerInventory{
+PocketMine class AnvilInventory extends ContainerInventory{
 	public function __construct(Position $pos){
 		parent::__construct(new FakeBlockMenu($this, $pos), InventoryType::get(InventoryType::ANVIL));
 	}
@@ -36,7 +36,7 @@ class AnvilInventory extends ContainerInventory{
 		return $this->holder;
 	}
 
-	public function onClose(Player $who){
+	public function onClose($who){
 		parent::onClose($who);
 
 		for($i = 0; $i < 2; ++$i){
